@@ -32,7 +32,7 @@
       <!-- HEADER-RIGHT -->
       <div class="header-right">
         <div class="box-input">
-          <input type="text">
+          <input @keyup.enter="ricerca" type="text" v-model="query" placeholder="Cerca film o serie tv">
         </div>
       </div>
       <!-- /HEADER-RIGHT -->
@@ -41,8 +41,11 @@
     <!-- MAIN -->
     <main>
       <div class="box-copertina">
-        <div class="copertina">
-
+        <div class="copertina" v-for="film in films">
+          <h2></h2>
+          <h3></h3>
+          <h3></h3>
+          <h3></h3>
         </div>
 
       </div>
