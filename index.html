@@ -41,11 +41,11 @@
     <!-- MAIN -->
     <main>
       <div class="box-copertina">
-        <div class="copertina" v-for="film in films">
-          <h2></h2>
-          <h3></h3>
-          <h3></h3>
-          <h3></h3>
+        <div v-for="film in films" class="copertina">
+          <h2> {{film.title}} </h2>
+          <h3>{{film.original_title}}</h3>
+          <h3>{{film.original_language}}</h3>
+          <h3>{{film.vote_average}}</h3>
         </div>
 
       </div>
