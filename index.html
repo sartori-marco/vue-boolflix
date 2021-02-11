@@ -32,7 +32,7 @@
       <!-- HEADER-RIGHT -->
       <div class="header-right">
         <div class="box-input">
-          <input @keyup.enter="ricerca" type="text" v-model="query" placeholder="Cerca film o serie tv">
+          <input @keyup.enter="ricerca" type="text" v-model="valoreInput" placeholder="Cerca film o serie tv">
         </div>
       </div>
       <!-- /HEADER-RIGHT -->
@@ -41,14 +41,24 @@
     <!-- MAIN -->
     <main>
       <div class="box-copertina">
+        <!-- FILM -->
         <div v-for="film in films" class="copertina">
           <h2> {{film.title}} </h2>
           <h3>{{film.original_title}}</h3>
           <h3>{{film.original_language}}</h3>
           <h3>{{film.vote_average}}</h3>
+          <img class="bandiera" :src="'img/' + film.original_language + '_bandiera.png'" alt="bandiera">
         </div>
 
+        <!-- SERIE TV -->
+        <div v-for="serie in series" class="copertina">
+          <h2> {{serie.name}} </h2>
+          <h3>{{serie.original_name}}</h3>
+          <h3>{{serie.original_language}}</h3>
+          <h3>{{serie.vote_average}}</h3>
+        </div>
       </div>
+      <!-- / BOX COPERTINA -->
 
 
 

@@ -46,7 +46,11 @@ header .header-right .box-input{
 
 }
 
-
+.box-copertina .copertina .bandiera{
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+}
 
 
 
