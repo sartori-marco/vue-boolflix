@@ -7,7 +7,8 @@ var app = new Vue({
     query: '',
     films: '',
     series: '',
-    // immagine: 'https://image.tmdb.org/t/p/w342'
+    vuota: 'img/locandinavuota.png',
+    baseLocandina: 'https://image.tmdb.org/t/p/w342'
   },
 
   methods:{
