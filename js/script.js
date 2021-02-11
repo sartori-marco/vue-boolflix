@@ -8,7 +8,8 @@ var app = new Vue({
     films: '',
     series: '',
     vuota: 'img/locandinavuota.png',
-    baseLocandina: 'https://image.tmdb.org/t/p/w342'
+    baseLocandina: 'https://image.tmdb.org/t/p/w342',
+    nostelle: ''
   },
 
   methods:{
@@ -43,7 +44,6 @@ var app = new Vue({
         this.valoreInput = '';
       })
     },
-    // VOTI
 
   }
 });

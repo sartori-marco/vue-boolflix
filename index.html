@@ -44,21 +44,31 @@
         <!-- FILM -->
         <div v-for="film in films" class="copertina">
           <img class="locandina" :src="(film.backdrop_path == null) ? vuota : baseLocandina + film.backdrop_path" alt="film.title">
-          <h2> {{film.title}} </h2>
-          <h3>{{film.original_title}}</h3>
-          <h3>{{film.original_language}}</h3>
-          <h3>{{film.vote_average}}</h3>
-          <img class="bandiera" :src="'img/' + film.original_language + '_bandiera.png'" alt="bandiera">
+          <!-- DETTAGLI FILM -->
+          <div class="dettagli">
+            <h2> {{film.title}} </h2>
+            <h3>{{film.original_title}}</h3>
+            <h3>{{film.original_language}}</h3>
+            <!-- PER VOTO IN STELLE -->
+            <h4>Voto: <i v-for="(i,index) in 5" :class="(index >= film.vote_average) ? 'nostelle' : ''" class="fas fa-star"></i>  </h4>
+            <img class="bandiera" :src="'img/' + film.original_language + '_bandiera.png'" alt="na">
+          </div>
+
         </div>
 
         <!-- SERIE TV -->
         <div v-for="serie in series" class="copertina">
-          <img :src="(serie.backdrop_path == null) ? vuota : baseLocandina + serie.backdrop_path" alt="serie.title">
-          <h2> {{serie.name}} </h2>
-          <h3>{{serie.original_name}}</h3>
-          <h3>{{serie.original_language}}</h3>
-          <h3>{{serie.vote_average}}</h3>
-          <img class="bandiera" :src="'img/' + serie.original_language + '_bandiera.png'" alt="bandiera">
+          <img class="locandina" :src="(serie.backdrop_path == null) ? vuota : baseLocandina + serie.backdrop_path" alt="serie.title">
+          <!-- DETTAGLI SERIE TV -->
+          <div class="dettagli">
+            <h2> {{serie.name}} </h2>
+            <h3>{{serie.original_name}}</h3>
+            <h3>{{serie.original_language}}</h3>
+            <!-- PER VOTO IN STELLE -->
+            <h4>Voto: <i v-for="(i,index) in 5" :class="(index >= serie.vote_average) ? 'nostelle' : ''" class="fas fa-star"></i> </h4>
+            <img class="bandiera" :src="'img/' + serie.original_language + '_bandiera.png'" alt="na">
+          </div>
+
         </div>
       </div>
       <!-- / BOX COPERTINA -->
