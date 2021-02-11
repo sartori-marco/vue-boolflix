@@ -42,7 +42,8 @@ var app = new Vue({
         this.series = result.data.results;
         this.valoreInput = '';
       })
-    }
+    },
+    // VOTI
 
   }
 });

@@ -43,7 +43,7 @@
       <div class="box-copertina">
         <!-- FILM -->
         <div v-for="film in films" class="copertina">
-          <img :src="(film.backdrop_path == null) ? vuota : baseLocandina + film.backdrop_path" alt="film.title">
+          <img class="locandina" :src="(film.backdrop_path == null) ? vuota : baseLocandina + film.backdrop_path" alt="film.title">
           <h2> {{film.title}} </h2>
           <h3>{{film.original_title}}</h3>
           <h3>{{film.original_language}}</h3>
