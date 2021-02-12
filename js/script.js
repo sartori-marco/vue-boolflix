@@ -44,6 +44,13 @@ var app = new Vue({
         this.valoreInput = '';
       })
     },
+    // VOTI
+    // voto(array){
+    //   array.forEach((element, i) => {
+    //     element.vote_average = parseInt(element.vote_average * 5 / 10);
+    //   });
+    //
+    // }
 
   }
 });
